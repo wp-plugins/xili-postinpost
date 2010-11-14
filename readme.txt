@@ -7,11 +7,11 @@ Tested up to: 3.0
 Stable tag: 0.9.0
 License: GPLv2
 
-xili-postinpost provides a triple tookit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
+xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
 
 == Description ==
 
-*xili-postinpost provides a triple tookit to insert post(s) everywhere in webpage - outside or inside WP loop - . The displayed post(s) are resulting of queries like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.*
+*xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage - outside or inside WP loop - . The displayed post(s) are resulting of queries like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.*
 
 * Template tag function `xi_postinpost()` - see source , 
 * shortcode like `[xilipostinpost query="p=1"]` or like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2&lang=en_us"]</blockquote>` as in [About Page](http://dev.xiligroup.com/?page_id=3) at end.
@@ -24,8 +24,11 @@ For each post of the resulting list, the displayed result can contain title, exc
 == Installation ==
 
 Upload the xili-postinpost plugin to your blog, Activate it. Go to settings.
-If you want to use widget, go to widget menu of Appearance menu.
+
+If you want to use widget, go to *Widgets* menu of Appearance menu.
+
 To use shortcode inside post's content, refer to examples provided in these posts [here](http://dev.xiligroup.com/).
+
 To use core function of plugin, as developer, refer directly to code source before inserting (and echoing result) the function in your theme.
 
 = prerequisite =
@@ -81,7 +84,7 @@ Run [live here](http://dev.xiligroup.com/)
 
 = Why this plugin ? =
 
-xili-postinpost is compromise between minimum php coding (but not accessible by everybody) and end-user tool (like widget) *- but with lot of php lines in background -* to afford flexibility for webmaster and data-designer for CMS. The core function of the plugin ( `xi_postinpost()` ) and its rich argument(array with lot params) was created 3 years ago to insert by example a recent news in header, a target post inside blockquote set in content of a page or a post. Doing a public version is like finishing a book. Remind that free code is not gratis, include fees in quotation for commercial use or clients and donate. For free use, send an email!
+xili-postinpost is compromise between minimum php coding (but not accessible by everybody) and end-user tool (like widget) *- but with lot of php lines in background -* to afford flexibility for webmaster and data-designer for CMS. The core function of the plugin ( `xi_postinpost()` ) and its rich argument (array with lot params) was created 3 years ago to insert by example a recent news in header, a target post inside blockquote set in content of a page or a post. Doing a public version is like finishing a book. Remind that free code is not gratis, include fees in quotation for commercial use or clients and donate. For free use, send an email!
 
 
 
