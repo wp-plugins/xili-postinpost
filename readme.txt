@@ -19,7 +19,7 @@ xili-postinpost provides a triple tookit to insert post(s) everywhere in webpage
 
 are available for developers, authors and webmasters.
 
-For each post of the resulting list, the displayed result can contain title, excerpt, content, thumnail image with or without link to the post as single.
+For each post of the resulting list, the displayed result can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
 == Installation ==
 
@@ -81,7 +81,7 @@ Run [live here](http://dev.xiligroup.com/)
 
 = Why this plugin ? =
 
-xili-postinpost is compromise between minimum php coding (but not accessible by everybody) and end-user tool (like widget) *- but with lot of php lines in background -* to afford flexibility for webmaster and data-designer for CMS. The core function of the plugin ( `xi_postinpost()` ) and its rich argument(array with lot params) was created 3 years ago to insert by example a recent news in header, a target post inside blockquote set in content of a page or a post. Doing a public version is like finishing a book. Remind that free code is not gratis, include fees in quotation for commercial use or clients !
+xili-postinpost is compromise between minimum php coding (but not accessible by everybody) and end-user tool (like widget) *- but with lot of php lines in background -* to afford flexibility for webmaster and data-designer for CMS. The core function of the plugin ( `xi_postinpost()` ) and its rich argument(array with lot params) was created 3 years ago to insert by example a recent news in header, a target post inside blockquote set in content of a page or a post. Doing a public version is like finishing a book. Remind that free code is not gratis, include fees in quotation for commercial use or clients and donate. For free use, send an email!
 
 
 
