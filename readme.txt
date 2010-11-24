@@ -48,7 +48,7 @@ With **xili-postinpost** it is possible to choose what to display and which cate
 
 Currently the result of widget is ever displayed. Here it is possible to use function (currents or made by webmaster) to decide when to display according context. By example if you use `is_page`, if the condition return true, the widget show the result here when a page is displayed in website. Another example with `is_category` and params `1,5,87` in the query input : when one these three categories is shown, the widget show the resulting list.
 
-= What happens is the condition is not true ? =
+= What happens if the condition is not true ? =
 
 If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible 
 to create and use a conditional function created by you (in functions.php).
