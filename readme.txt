@@ -3,8 +3,8 @@ Contributors: MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
-Tested up to: 3.0
-Stable tag: 0.9.1
+Tested up to: 3.1
+Stable tag: 0.9.2
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -19,7 +19,7 @@ xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpag
 
 are available for developers, authors and webmasters.
 
-For each post of the resulting list, the displayed result can contain title, excerpt, content, thumbnail image with or without link to the post as single.
+For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
 == Installation ==
 
@@ -53,6 +53,9 @@ Currently the result of widget is ever displayed. Here it is possible to use fun
 If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible 
 to create and use a conditional function created by you (in functions.php).
 
+= What is - from to - feature introduced in 0.9.2 ? =
+The webmaster is able to define a period (a slot) when the widget is visible in sidebar (or the shortcode is display inside the content). By example: for an advertising post or an article for a future meeting which disappears the day after the meeting (expiration date).
+
 = Is xili-post-in-post compatible with xili-language trilogy ? =
 
 Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go in WordPress [repository](http://wordpress.org/extend/plugins/search.php?q=xili&sort=).
@@ -61,7 +64,7 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20101121 - MS - dev.xiligroup.com
+© 20101128 - MS - dev.xiligroup.com
 
 == Screenshots ==
 
@@ -73,6 +76,8 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 0.9.2 =
+**From to** features added
 = 0.9.1 =
 2010-11-21 - fixes doc and more docs
 = 0.9.0 =
@@ -82,7 +87,8 @@ Run [live here](http://dev.xiligroup.com/)
 
 == More infos ==
 
-* pre-tested on WP 3.0 multisite mode
+* Pre-tested on WP 3.1 mono and multisite mode
+* Tested on WP 3.0 multisite mode
 * NOT TESTED ON WP 2.9.2
 
 = Why this plugin ? =
