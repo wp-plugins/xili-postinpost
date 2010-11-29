@@ -4,7 +4,7 @@ Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 0.9.2
+Stable tag: 0.9.3
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -64,7 +64,7 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20101128 - MS - dev.xiligroup.com
+© 20101129 - MS - dev.xiligroup.com
 
 == Screenshots ==
 
@@ -76,8 +76,10 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 0.9.3 =
+2010-11-29 - fixes message mistake when no post (warning)
 = 0.9.2 =
-**From to** features added
+2010-11-28 - **From to** features added
 = 0.9.1 =
 2010-11-21 - fixes doc and more docs
 = 0.9.0 =
