@@ -4,7 +4,7 @@ Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 0.9.3
+Stable tag: 0.9.5
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -36,6 +36,7 @@ To use core function of plugin, as developer, refer directly to code source befo
 * a minimum of knowledges about queries (as end part of short link) like `?p=1` or `?cat=17&tag=new`
 * how are organized datas and semantic in the website.
 * able to read WordPress Codex !
+* for results formatting, some knowlegdges in html and class - xili-postinpost don't install style but is able to set html and class if option is enabled for widget or by adding params in shortcode.
 
 == Frequently Asked Questions ==
 
@@ -53,6 +54,10 @@ Currently the result of widget is ever displayed. Here it is possible to use fun
 If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible 
 to create and use a conditional function created by you (in functions.php).
 
+= When using shortcode, the result display excerpt under the title, why ? =
+
+See the topic [here in forum](http://forum2.dev.xiligroup.com/topic.php?id=60)
+
 = What is - from to - feature introduced in 0.9.2 ? =
 The webmaster is able to define a period (a slot) when the widget is visible in sidebar (or the shortcode is display inside the content). By example: for an advertising post or an article for a future meeting which disappears the day after the meeting (expiration date).
 
@@ -64,7 +69,7 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20101129 - MS - dev.xiligroup.com
+© 20101211 - MS - dev.xiligroup.com
 
 == Screenshots ==
 
@@ -76,21 +81,25 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 0.9.5 =
+* 2010-12-11 - add option for better html and css styles choice in widget.
+= 0.9.4 =
+* 2010-12-10 - fixes featured image ever as link and load textdomain for UI, add featured image params in shortcode 
 = 0.9.3 =
-2010-11-29 - fixes message mistake when no post (warning)
+* 2010-11-29 - fixes message mistake when no post (warning)
 = 0.9.2 =
-2010-11-28 - **From to** features added
+* 2010-11-28 - **From to** features added
 = 0.9.1 =
-2010-11-21 - fixes doc and more docs
+* 2010-11-21 - fixes doc and more docs
 = 0.9.0 =
-2010-11-14 - settings admin and pre-doc
+* 2010-11-14 - settings admin and pre-doc
 = 0.8.0 =
-2010-11-12 - first public release w/o settings admin
+* 2010-11-12 - first public release w/o settings admin
 
 == More infos ==
 
-* Pre-tested on WP 3.1 mono and multisite mode
-* Tested on WP 3.0 multisite mode
+* Pre-tested on WP 3.1 mono and multisite mode.
+* Tested on WP 3.0 multisite mode.
 * NOT TESTED ON WP 2.9.2
 
 = Why this plugin ? =
