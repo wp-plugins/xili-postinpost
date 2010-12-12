@@ -27,7 +27,7 @@ Upload the xili-postinpost plugin to your blog, Activate it. Go to settings.
 
 If you want to use widget, go to *Widgets* menu of Appearance menu.
 
-To use shortcode inside post's content, refer to examples provided in these posts [here](http://dev.xiligroup.com/xili-postinpost/).
+To use shortcode inside post's content, refer to examples provided in these posts [here](http://dev.xiligroup.com/xili-postinpost/) or in [Forum](http://forum2.dev.xiligroup.com/forum.php?id=3).
 
 To use core function of plugin, as developer, refer directly to code source before inserting (and echoing result) the function in your theme.
 
