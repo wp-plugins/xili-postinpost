@@ -4,7 +4,7 @@ Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 0.9.5
+Stable tag: 0.9.6
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -27,7 +27,7 @@ Upload the xili-postinpost plugin to your blog, Activate it. Go to settings.
 
 If you want to use widget, go to *Widgets* menu of Appearance menu.
 
-To use shortcode inside post's content, refer to examples provided in these posts [here](http://dev.xiligroup.com/xili-postinpost/) or in [Forum](http://forum2.dev.xiligroup.com/forum.php?id=3).
+To use shortcode inside post's content, refer to examples provided in these posts [here](http://dev.xiligroup.com/xili-postinpost/).
 
 To use core function of plugin, as developer, refer directly to code source before inserting (and echoing result) the function in your theme.
 
@@ -69,7 +69,7 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20101211 - MS - dev.xiligroup.com
+© 20110117 - MS - dev.xiligroup.com
 
 == Screenshots ==
 
@@ -81,6 +81,8 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 0.9.6 =
+* 2011-01-17 - fixes pagination when paginated parent has paginated children (thanks to Piotr)
 = 0.9.5 =
 * 2010-12-11 - add option for better html and css styles choice in widget.
 = 0.9.4 =
