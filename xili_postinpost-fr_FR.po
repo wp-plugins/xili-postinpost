@@ -1,0 +1,256 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xili-postinpost\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-13 09:19+0100\n"
+"PO-Revision-Date: 2011-06-06 18:14+0100\n"
+"Last-Translator: dev.xiligroup <contact@xiligroup.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: /xili-postinpost\n"
+
+#: /xili-postinpost/xili-postinpost.php:68
+msgid "xili Post in Post plugin"
+msgstr "Extension xili Post in Post"
+
+msgid "Mail & Support"
+msgstr "Courriel et support"
+
+msgid "Mail to dev.xiligroup"
+msgstr "Courriel pour dev.xiligroup"
+
+msgid "Cc:"
+msgstr "Cc :"
+
+msgid "Theme name: %s"
+msgstr "Nom du thème : %s"
+
+msgid "Other xili plugins = %s"
+msgstr "Autres plugins xili : %s"
+
+msgid "Type of webmaster:"
+msgstr "Type de webmestre :"
+
+msgid "Define your experience as webmaster…"
+msgstr "Décrivez votre expérience en webmestre…"
+
+msgid "Newbie in WP"
+msgstr "Novice en WP"
+
+msgid "Good knowledge in WP and few in php"
+msgstr "Bon niveau en WP mais peu en php"
+
+msgid "Good knowledge in WP, CMS and good in php"
+msgstr "Bon niveau en WP, CMS et bon en php"
+
+msgid "WP theme and /or plugin developper"
+msgstr "Développeur de themes WP et/ou de Plugin pour WP"
+
+msgid "Subject:"
+msgstr "Objet :"
+
+msgid "Choose topic..."
+msgstr "Choisir le thème..."
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Question"
+msgstr "Question"
+
+msgid "Encouragement"
+msgstr "Encouragement"
+
+msgid "Support need"
+msgstr "Demande de support"
+
+msgid "Your message here…"
+msgstr "Ecrire votre message…"
+
+msgid "Before send the mail, check the infos to be sent and complete textarea. A copy (Cc:) is sent to webmaster email (modify it if needed)."
+msgstr "Avant d'envoyer le courriel, cocher les infos à envoyer et compléter les autres champs. Une copie est envoyée au webmestre (courriel à modifier si nécessaire)."
+
+msgid "Send email"
+msgstr "Envoyer le courriel"
+
+msgid "Thanks for your email. A copy was sent to %s (%s)"
+msgstr "Merci pour votre courriel dont une copie est envoyé à %s (%s)"
+
+msgid "Email sent."
+msgstr "Courriel envoyé"
+
+msgid "Reply in less that 3 or 4 days…"
+msgstr "Réponse dans quelques jours, soyez patient…"
+
+#: /xili-postinpost/xili-postinpost.php:79
+msgid "Settings updated."
+msgstr "Réglages mis à jour"
+
+#: /xili-postinpost/xili-postinpost.php:83
+msgid "xili Post in Post"
+msgstr ""
+
+#: /xili-postinpost/xili-postinpost.php:94
+msgid "xili-postinpost provides a triple tookit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available."
+msgstr "xili-postinpost apporte une triple boite à outils pour insérer un ou plusieurs articles à tout endroit de la page. Balise de thème (template tag), balise de contenu (shortcode) et widget sont mis à disposition."
+
+#: /xili-postinpost/xili-postinpost.php:95
+msgid "Shortcode: [xilipostinpost], as [xilipostinpost query=\"p=1\"]"
+msgstr "Shortcode: [xilipostinpost], comme ici [xilipostinpost query=\"p=1\"]"
+
+#: /xili-postinpost/xili-postinpost.php:96
+msgid "Template tag: xi_postinpost()"
+msgstr "Balise de thème (template tag) : xi_postinpost()"
+
+msgid "Preliminary doc in readme.txt and in forum…"
+msgstr "Documentation dans le fichier Readme.txt et sur le forum…"
+
+#: /xili-postinpost/xili-postinpost.php:100
+msgid "Widget available:"
+msgstr "Widget activé"
+
+msgid "Display period available:"
+msgstr "Période d'affichage possible :"
+
+msgid "HTML tags settings:"
+msgstr "Réglage des balises HTML visible :"
+
+#: /xili-postinpost/xili-postinpost.php:104
+msgid "Save Changes"
+msgstr "Sauver les modifications"
+
+#: /xili-postinpost/xili-postinpost.php:108
+msgid "Syntax examples in widget setting UI"
+msgstr "Exemples de syntaxe dans l'interface du widget"
+
+#: /xili-postinpost/xili-postinpost.php:109
+msgid "Here simple query"
+msgstr "Voici une requête simple"
+
+#: /xili-postinpost/xili-postinpost.php:110
+msgid "A post display with title and excerpt"
+msgstr "Un article affiché avec titre et extrait"
+
+#: /xili-postinpost/xili-postinpost.php:112
+msgid "Here conditional query"
+msgstr "Voilà une requête avec condition"
+
+#: /xili-postinpost/xili-postinpost.php:113
+msgid "Three posts of category 3 displayed with title and link IF a page is displayed (with two widgets options set):"
+msgstr "Affichage de trois articles avec titre (et lien) <strong>si</strong> une page est affichée (les deux options de réglages du widget sont activées) :"
+
+msgid "Another conditional query"
+msgstr "Une autre requête avec condition"
+
+msgid "True and false conditions example: what happens and when ?"
+msgstr "Un exemple avec une deuxième condition si la première est fausse : que se passe-t-il et quand ?"
+
+#: /xili-postinpost/xili-postinpost.php:118
+msgid "Author"
+msgstr "Auteur"
+
+#: /xili-postinpost/xili-postinpost.php:138
+msgid "Things to remember to set xili-postinpost:"
+msgstr "Eléments à mémoriser pour régler xili-postinpost"
+
+#: /xili-postinpost/xili-postinpost.php:140
+msgid "Verify that the theme can use widget."
+msgstr "Vérifier que le thème peut intégrer des widgets"
+
+#: /xili-postinpost/xili-postinpost.php:141
+msgid "Visit dev.xiligroup website."
+msgstr "Visiter le site <a href=\"http://dev.xiligroup.com/xili-postinpost\" target=\"_blank\">dev.xiligroup.com</a>"
+
+#: /xili-postinpost/xili-postinpost.php:145
+msgid "For more information:"
+msgstr ""
+
+#: /xili-postinpost/xili-postinpost.php:146
+msgid "<a href=\"http://dev.xiligroup.com/xili-postinpost\" target=\"_blank\">Xili-PostinPost Plugin Documentation</a>"
+msgstr "<a href=\"http://dev.xiligroup.com/xili-postinpost\" target=\"_blank\">Documentation de l'extension xili-postinpost</a>"
+
+#: /xili-postinpost/xili-postinpost.php:147
+msgid "<a href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress Documentation</a>"
+msgstr "<a href=\"http://codex.wordpress.org/\" target=\"_blank\">Documentation <a href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress Documentation</a></a>"
+
+#: /xili-postinpost/xili-postinpost.php:148
+msgid "<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Support Forums</a>"
+msgstr "<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Forums support</a>"
+
+#: /xili-postinpost/xili-postinpost.php:245
+msgid "no post"
+msgstr "pas d'article"
+
+#: /xili-postinpost/xili-postinpost.php:280
+msgid "Display post in widget, by ©xiligroup v."
+msgstr "Affiche des articles via un widget par ©xiligroup v."
+
+#: /xili-postinpost/xili-postinpost.php:282
+msgid "Post in post"
+msgstr ""
+
+#: /xili-postinpost/xili-postinpost.php:423
+msgid "Title:"
+msgstr ""
+
+#: /xili-postinpost/xili-postinpost.php:425
+msgid "Show post title"
+msgstr "Affiche le titre"
+
+#: /xili-postinpost/xili-postinpost.php:425
+msgid "Title as link"
+msgstr "Titre comme lien"
+
+#: /xili-postinpost/xili-postinpost.php:426
+msgid "Show:"
+msgstr "Affiche :"
+
+#: /xili-postinpost/xili-postinpost.php:426
+msgid "Content"
+msgstr "Contenu"
+
+#: /xili-postinpost/xili-postinpost.php:426
+msgid "Excerpt"
+msgstr "Extrait"
+
+#: /xili-postinpost/xili-postinpost.php:426
+msgid "Featured image"
+msgstr "Image en une"
+
+#: /xili-postinpost/xili-postinpost.php:426
+msgid "Image as link"
+msgstr "Image comme lien"
+
+#: /xili-postinpost/xili-postinpost.php:427
+msgid "Number of posts to show:"
+msgstr "Nombre à afficher :"
+
+msgid "HTML settings"
+msgstr "Réglages HTML"
+
+#: /xili-postinpost/xili-postinpost.php:432
+msgid "Title tags"
+msgstr "Balise du titre"
+
+msgid "Dates of display period"
+msgstr "Période d'affichage"
+
+msgid "Leave inputs empty for permanent display."
+msgstr "Laisser les champs vides pour un affichage permanent."
+
+msgid "From:"
+msgstr "De :"
+
+msgid "To:"
+msgstr "à :"
+
+msgid "(aaaa-mm-dd hh:mm)"
+msgstr "(aaaa-mm-jj hh:mm)"
+
