@@ -4,7 +4,7 @@ Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 0.9.6
+Stable tag: 0.9.7
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -18,6 +18,8 @@ xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpag
 * and widget with powerful syntax for contextual display of query's result.
 
 are available for developers, authors and webmasters.
+
+In widget (and template tag), if option is set, it is possible to choose display period and expiration date.
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
@@ -69,18 +71,20 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20110117 - MS - dev.xiligroup.com
+© 20110607 - MS - dev.xiligroup.com
 
 == Screenshots ==
 
 Run [live here](http://dev.xiligroup.com/)
 
 1. widget settings UI for a simple query
-2. widget settings UI for a simple conditional query
+2. widget settings UI for a simple conditional query and all display/input options set.
 3. widget settings UI for a two conditional queries
 
 == Changelog ==
 
+= 0.9.7 =
+* 2011-06-06 - fixes, source code cleaned, support email improved
 = 0.9.6 =
 * 2011-01-17 - fixes pagination when paginated parent has paginated children (thanks to Piotr)
 = 0.9.5 =
