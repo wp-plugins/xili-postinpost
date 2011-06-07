@@ -121,3 +121,5 @@ Please read the readme.txt before.
 As usually, don't forget to backup the database before major upgrade or testing no-current version found in *other versions* tabs.
 Upgrading can be easily procedeed through WP admin UI or through ftp.
 
+
+
