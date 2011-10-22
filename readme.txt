@@ -3,8 +3,8 @@ Contributors: MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
-Tested up to: 3.1
-Stable tag: 0.9.7
+Tested up to: 3.3
+Stable tag: 1.0.0
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -71,7 +71,7 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20110607 - MS - dev.xiligroup.com
+© 20111022 - MS - dev.xiligroup.com
 
 == Screenshots ==
 
@@ -83,6 +83,8 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 1.0.0 =
+* 2011-10-21 - add user function param (*userfunction*) to define your own displayed resulting loop
 = 0.9.7 =
 * 2011-06-06 - fixes, source code cleaned, support email improved
 = 0.9.6 =
@@ -120,6 +122,4 @@ No, it is only possible to combine one true and another one if the first is fals
 Please read the readme.txt before.
 As usually, don't forget to backup the database before major upgrade or testing no-current version found in *other versions* tabs.
 Upgrading can be easily procedeed through WP admin UI or through ftp.
-
-
 
