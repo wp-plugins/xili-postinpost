@@ -4,7 +4,7 @@ Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -47,6 +47,15 @@ To use core function of plugin, as developer, refer directly to code source befo
 **Recent Posts** only displays title with link of latest posts from all categories.
 With **xili-postinpost** it is possible to choose what to display and which categories or tags associated with post (and html tags or class). 
 
+= In template tag `xi_postinpost`: is it possible to use query passed as array ? =
+
+YES, see below an example using array and userfunction (formatting the result of query differently than default) :
+
+`
+<?php echo xi_postinpost( array( 'showposts' => '4' , 'query' => array( 'category__and' => array( $cat_id, 7 ) ), 'userfunction' => 'xili_pip_banner' ) ); ?>
+
+`
+
 = What is - conditional - display ? =
 
 Currently the result of widget is ever displayed. Here it is possible to use function (currents or made by webmaster) to decide when to display according context. By example if you use `is_page`, if the condition return true, the widget show the result here when a page is displayed in website. Another example with `is_category` and params `1,5,87` in the query input : when one these three categories is shown, the widget show the resulting list.
@@ -71,7 +80,7 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20111022 - MS - dev.xiligroup.com
+© 20111128 - MS - dev.xiligroup.com
 
 == Screenshots ==
 
@@ -83,6 +92,8 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 1.0.1 =
+* 2011-11-27 - serialize for cache if query is array as possible in template tag `xi_postinpost()`
 = 1.0.0 =
 * 2011-10-21 - add user function param (*userfunction*) to define your own displayed resulting loop
 = 0.9.7 =
