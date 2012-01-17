@@ -25,7 +25,7 @@ For each post of the resulting list, the displayed result is hightly customizabl
 
 = New with 1.1 : = 
 
-A shortcode like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2" lang="cur"]</blockquote>` with param `lang`set to `cur`give a result according the current language (example: inside an undefined page displayed according browser language).
+A shortcode like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2" lang="cur"]</blockquote>` with param `lang` set to `cur` give a result according the current language (example: inside an undefined page displayed according browser language).
 
 == Installation ==
 
