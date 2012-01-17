@@ -1,10 +1,10 @@
 === xili Post in Post ===
-Contributors: MS dev.xiligroup.com
+Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -22,6 +22,10 @@ are available for developers, authors and webmasters.
 In widget (and template tag), if option is set, it is possible to choose display period and expiration date.
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
+
+= New with 1.1 : = 
+
+A shortcode like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2" lang="cur"]</blockquote>` with param `lang` set to `cur` give a result according the current language (example: inside an undefined page displayed according browser language).
 
 == Installation ==
 
@@ -80,7 +84,7 @@ Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go
 
 Effectively, prefer [forum](http://forum2.dev.xiligroup.com/) to obtain some support.
 
-© 20111128 - MS - dev.xiligroup.com
+
 
 == Screenshots ==
 
@@ -92,6 +96,8 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 1.1.0 =
+* 2012-01-17 - add param lang in shortcode (as in widget for the_curlang)
 = 1.0.1 =
 * 2011-11-27 - serialize for cache if query is array as possible in template tag `xi_postinpost()`
 = 1.0.0 =
@@ -115,6 +121,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
+© 20120117 - MS - dev.xiligroup.com
 == More infos ==
 
 * Pre-tested on WP 3.1 mono and multisite mode.
