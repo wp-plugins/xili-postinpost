@@ -1,10 +1,10 @@
 === xili Post in Post ===
 Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
-Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
+Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file, widget
 Requires at least: 3.0
-Tested up to: 3.3
-Stable tag: 1.1.0
+Tested up to: 3.4.2
+Stable tag: 1.2.0
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -23,6 +23,12 @@ In widget (and template tag), if option is set, it is possible to choose display
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
+
+= New with 1.2 : =
+* option via filter ( `xili_postinpost_query` ) for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, 
+* add param for no post msg, 
+* default option for editlink for author.
+
 = New with 1.1 : = 
 
 A shortcode like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2" lang="cur"]</blockquote>` with param `lang` set to `cur` give a result according the current language (example: inside an undefined page displayed according browser language).
@@ -35,12 +41,12 @@ If you want to use widget, go to *Widgets* menu of Appearance menu.
 
 To use shortcode inside post's content, refer to examples provided in these posts [here](http://dev.xiligroup.com/xili-postinpost/).
 
-To use core function of plugin, as developer, refer directly to code source before inserting (and echoing result) the function in your theme.
+To use core functions of plugin, as developer, refer directly to code source before inserting (and echoing result) of the function in your theme.
 
 = prerequisite =
 
 * a minimum of knowledges about queries (as end part of short link) like `?p=1` or `?cat=17&tag=new`
-* how are organized datas and semantic in the website.
+* how are organized datas and semantic in the CMS website.
 * able to read WordPress Codex !
 * for results formatting, some knowlegdges in html and class - xili-postinpost don't install style but is able to set html and class if option is enabled for widget or by adding params in shortcode.
 
@@ -96,6 +102,10 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 
+= 1.2.0 =
+* 2012-11-22 - option via filter for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, add param for no post msg, default option for editlink for author
+= 1.1.1 =
+* 2012-04-06 - pre-tests with WP 3.4: fixes metaboxes columns
 = 1.1.0 =
 * 2012-01-17 - add param lang in shortcode (as in widget for the_curlang)
 = 1.0.1 =
@@ -121,16 +131,16 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 20120117 - MS - dev.xiligroup.com
+© 20121122 - MS - dev.xiligroup.com
 == More infos ==
 
-* Pre-tested on WP 3.1 mono and multisite mode.
-* Tested on WP 3.0 multisite mode.
-* NOT TESTED ON WP 2.9.2
+* Tested on WP mono and multisite mode.
+* Tested on WP 3.5 beta mono and multisite mode.
+* NOT MORE TESTED ON WP 2.9.2
 
 = Why this plugin ? =
 
-xili-postinpost is compromise between minimum php coding (but not accessible by everybody) and end-user tool (like widget) *- but with lot of php lines in background -* to afford flexibility for webmaster and data-designer for CMS. The core function of the plugin ( `xi_postinpost()` ) and its rich argument (array with lot params) was created 3 years ago to insert by example a recent news in header, a target post inside blockquote set in content of a page or a post. Doing a public version is like finishing a book. Remind that free code is not gratis, include fees in quotation for commercial use or clients and donate. For free use, send an email!
+xili-postinpost is compromise between minimum php coding (but not accessible by everybody) and end-user tool (like widget) *- but with lot of php lines in background -* to afford flexibility for webmaster and data-designer for CMS. The core function of the plugin ( `xi_postinpost()` ) and its rich argument (array with lot params) was created 4 years ago to insert by example a recent news in header, a target post inside blockquote set in content of a page or a post. Doing a public version is like finishing a book. Remind that free code is not gratis, include fees in quotation for commercial use or clients and donate. For free use, send an email!
 
 = Are the queries recursive in widget ? =
 No, it is only possible to combine one true and another one if the first is false: the syntax is `[condition=… query=…]:[query=…]`. The second part can have is own condition as in screenshot 6.
