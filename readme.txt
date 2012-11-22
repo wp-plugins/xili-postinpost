@@ -2,7 +2,7 @@
 Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file, widget
-Requires at least: 3.0
+Requires at least: 3.2.1
 Tested up to: 3.4.2
 Stable tag: 1.2.0
 License: GPLv2
