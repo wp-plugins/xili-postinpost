@@ -3,8 +3,8 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file, widget
 Requires at least: 3.2.1
-Tested up to: 3.4.2
-Stable tag: 1.2.0
+Tested up to: 3.5.1
+Stable tag: 1.2.1
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -24,7 +24,8 @@ In widget (and template tag), if option is set, it is possible to choose display
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
 
-= New with 1.2 : =
+= New with 1.2.x : =
+* tested WP 3.5.1
 * option via filter ( `xili_postinpost_query` ) for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, 
 * add param for no post msg, 
 * default option for editlink for author.
@@ -101,7 +102,8 @@ Run [live here](http://dev.xiligroup.com/)
 3. widget settings UI for a two conditional queries
 
 == Changelog ==
-
+= 1.2.1 =
+* 2013-01-28 - fixes support settings
 = 1.2.0 =
 * 2012-11-22 - option via filter for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, add param for no post msg, default option for editlink for author
 = 1.1.1 =
@@ -131,11 +133,10 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 20121122 - MS - dev.xiligroup.com
+© 20130128 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
-* Tested on WP 3.5 beta mono and multisite mode.
 * NOT MORE TESTED ON WP 2.9.2
 
 = Why this plugin ? =
