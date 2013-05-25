@@ -1,10 +1,10 @@
 === xili Post in Post ===
 Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
-Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file, widget
+Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.2.1
-Tested up to: 3.5.1
-Stable tag: 1.2.1
+Tested up to: 3.6
+Stable tag: 1.2.2
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -21,10 +21,13 @@ are available for developers, authors and webmasters.
 
 In widget (and template tag), if option is set, it is possible to choose display period and expiration date.
 
+In widget (if xili-language active) to combine a query and the current language use params like `[query="cat=14" lang="cur"]` with square bracket`[]` and lang set cur. Don't put *cur* in query. See [screenshot](http://wordpress.org/plugins/xili-postinpost/screenshots/).
+
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
 
 = New with 1.2.x : =
+* tested WP 3.6
 * tested WP 3.5.1
 * option via filter ( `xili_postinpost_query` ) for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, 
 * add param for no post msg, 
@@ -99,9 +102,12 @@ Run [live here](http://dev.xiligroup.com/)
 
 1. widget settings UI for a simple query
 2. widget settings UI for a simple conditional query and all display/input options set.
-3. widget settings UI for a two conditional queries
+3. widget settings UI for a two conditional queries.
+3. widget settings UI for a query combined with current language (requires xili-language).
 
 == Changelog ==
+= 1.2.2 =
+* 2013-03-25 - add titlelink param in shortcode, fixes notice - widget & class _construct (need php5) - tests 3.6
 = 1.2.1 =
 * 2013-01-28 - fixes support settings
 = 1.2.0 =
@@ -133,7 +139,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 20130128 - MS - dev.xiligroup.com
+© 2013-05-25 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
