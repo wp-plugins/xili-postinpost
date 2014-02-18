@@ -3,8 +3,8 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.2.1
-Tested up to: 3.6
-Stable tag: 1.2.2
+Tested up to: 3.8.1
+Stable tag: 1.3.0
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -13,8 +13,10 @@ xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpag
 
 *xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage - outside or inside WP loop - . The displayed post(s) are resulting of queries like those in WP loop but not interfere with main WP loop. Widget contains conditional syntax.*
 
-* Template tag function `xi_postinpost()` - see source , 
+* Template tag function `xi_postinpost()` - see source ,
 * shortcode like `[xilipostinpost query="p=1"]` or like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2&lang=en_us"]</blockquote>` as in [About Page](http://dev.xiligroup.com/?page_id=3) at end.
+* A shortcode like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2" lang="cur"]</blockquote>` with param `lang` set to `cur` give a result according the current language (example: inside an undefined page displayed according browser language).
+
 * and widget with powerful syntax for contextual display of query's result.
 
 are available for developers, authors and webmasters.
@@ -25,17 +27,11 @@ In widget (if xili-language active) to combine a query and the current language 
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
+= New with 1.3.0 : =
+* Last Updated 2014-02-18
+* see [tab and chapters in changelog](http://wordpress.org/extend/plugins/xili-postinpost/changelog/)
 
-= New with 1.2.x : =
-* tested WP 3.6
-* tested WP 3.5.1
-* option via filter ( `xili_postinpost_query` ) for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, 
-* add param for no post msg, 
-* default option for editlink for author.
 
-= New with 1.1 : = 
-
-A shortcode like `<blockquote>[xilipostinpost query="cat=3,4,150&showposts=2" lang="cur"]</blockquote>` with param `lang` set to `cur` give a result according the current language (example: inside an undefined page displayed according browser language).
 
 == Installation ==
 
@@ -59,7 +55,7 @@ To use core functions of plugin, as developer, refer directly to code source bef
 = What is  - xili-postinpost - versus  - Recent Posts - delivered by WP as default widget ? =
 
 **Recent Posts** only displays title with link of latest posts from all categories.
-With **xili-postinpost** it is possible to choose what to display and which categories or tags associated with post (and html tags or class). 
+With **xili-postinpost** it is possible to choose what to display and which categories or tags associated with post (and html tags or class).
 
 = In template tag `xi_postinpost`: is it possible to use query passed as array ? =
 
@@ -76,7 +72,7 @@ Currently the result of widget is ever displayed. Here it is possible to use fun
 
 = What happens if the condition is not true ? =
 
-If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible 
+If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible
 to create and use a conditional function created by you (in functions.php).
 
 = When using shortcode, the result display excerpt under the title, why ? =
@@ -106,12 +102,14 @@ Run [live here](http://dev.xiligroup.com/)
 3. widget settings UI for a query combined with current language (requires xili-language).
 
 == Changelog ==
+= 1.3.0 =
+* new versioning (for WP 3.8+) - clean source
 = 1.2.2 =
 * 2013-03-25 - add titlelink param in shortcode, fixes notice - widget & class _construct (need php5) - tests 3.6
 = 1.2.1 =
 * 2013-01-28 - fixes support settings
 = 1.2.0 =
-* 2012-11-22 - option via filter for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, add param for no post msg, default option for editlink for author
+* 2012-11-22 - option via filter ( `xili_postinpost_query` ) for complex presetted queries (shortcode or template_tag) usable in mailing list plugin, add param for no post msg, default option for editlink for author
 = 1.1.1 =
 * 2012-04-06 - pre-tests with WP 3.4: fixes metaboxes columns
 = 1.1.0 =
@@ -127,7 +125,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.9.5 =
 * 2010-12-11 - add option for better html and css styles choice in widget.
 = 0.9.4 =
-* 2010-12-10 - fixes featured image ever as link and load textdomain for UI, add featured image params in shortcode 
+* 2010-12-10 - fixes featured image ever as link and load textdomain for UI, add featured image params in shortcode
 = 0.9.3 =
 * 2010-11-29 - fixes message mistake when no post (warning)
 = 0.9.2 =
@@ -139,11 +137,10 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2013-05-25 - MS - dev.xiligroup.com
+© 2014-02-18 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
-* NOT MORE TESTED ON WP 2.9.2
 
 = Why this plugin ? =
 
