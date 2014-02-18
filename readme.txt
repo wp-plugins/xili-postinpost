@@ -99,7 +99,8 @@ Run [live here](http://dev.xiligroup.com/)
 1. widget settings UI for a simple query
 2. widget settings UI for a simple conditional query and all display/input options set.
 3. widget settings UI for a two conditional queries.
-3. widget settings UI for a query combined with current language (requires xili-language).
+4. widget settings UI for a query combined with current language (requires xili-language).
+5. widget settings UI: in this case, Featured images of category ID11 will be listed in ul li list according current language.
 
 == Changelog ==
 = 1.3.0 =
