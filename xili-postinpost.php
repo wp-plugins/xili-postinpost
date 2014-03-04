@@ -548,9 +548,9 @@ class xili_postinpost {
  		switch ( $case_news ) {
 
  			case 'xpp_new_version' :
- 				$pointer_text = '<h3>' . esc_js( __( 'xili-postinpost updated', 'xili_postinpost') ) . '</h3>';
+ 				$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post updated', 'xili_postinpost'), '[©xili]') ) . '</h3>';
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-postinpost was updated to version %s', 'xili_postinpost' ) , XILI_PIP_VERSION) ). '.</p>';
-				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s adds the new params “more” for content part in shortcode and widget.', 'xili_postinpost'), XILI_PIP_VERSION) ). ',</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf( __( 'This version %s adds the new params “more” for content part in shortcode and widget.', 'xili_postinpost'), XILI_PIP_VERSION) ). ',</p>';
 
 				$pointer_text .= '<p>' . esc_js( __( 'Previous version introduces new version numbering for WP 3.8+', 'xili_postinpost')). ',</p>';
 
@@ -567,7 +567,7 @@ class xili_postinpost {
 				break;
 
 			case 'xpp_new_features_widget' :
- 				$pointer_text = '<h3>' . esc_js( __( 'xili-postinpost widget updated', 'xili_postinpost') ) . '</h3>';
+ 				$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post widget updated', 'xili_postinpost'), '[©xili]') ) . '</h3>';
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-postinpost was updated to version %s', 'xili_postinpost' ) , XILI_PIP_VERSION) ). '.</p>';
 				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s adds the new params “more” for content part in widget [shortcode]', 'xili_postinpost'), XILI_PIP_VERSION) ). '.</p>';
 

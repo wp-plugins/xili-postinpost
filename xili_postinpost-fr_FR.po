@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xili-postinpost\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-04 19:49+0100\n"
-"PO-Revision-Date: 2014-03-04 19:55+0100\n"
+"POT-Creation-Date: 2014-03-04 20:27+0100\n"
+"PO-Revision-Date: 2014-03-04 20:28+0100\n"
 "Last-Translator: dev.xiligroup <contact@xiligroup.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -356,16 +356,17 @@ msgstr "Plus d'information"
 msgid "Docs about xili-postinpost"
 msgstr "Docs sur xili-postinpost"
 
-#: xili-postinpost.php:550
-msgid "xili-postinpost updated"
-msgstr "xili-postinpost mis à jour"
+#: xili-postinpost.php:551
+#, php-format
+msgid "%s Post in post updated"
+msgstr "%s Post in post mis à jour"
 
-#: xili-postinpost.php:551 xili-postinpost.php:570
+#: xili-postinpost.php:552 xili-postinpost.php:571
 #, php-format
 msgid "xili-postinpost was updated to version %s"
 msgstr "xili-postinpost mis à jour en version %s"
 
-#: xili-postinpost.php:552
+#: xili-postinpost.php:553
 #, php-format
 msgid ""
 "This version %s adds the new params “more” for content part in shortcode and "
@@ -374,21 +375,21 @@ msgstr ""
 "Cette version %s ajoute un nouveau paramètre “more” utilisé dans le contenu "
 "- pour shortcode ou widget."
 
-#: xili-postinpost.php:554
+#: xili-postinpost.php:555
 msgid "Previous version introduces new version numbering for WP 3.8+"
 msgstr ""
 "La version précédente introduisait la nouvelle numérotation de version "
 "compatible WP 3.8+"
 
-#: xili-postinpost.php:557 xili-postinpost.php:576
+#: xili-postinpost.php:558 xili-postinpost.php:577
 msgid "See submenu"
 msgstr "Voir le sous-menu"
 
-#: xili-postinpost.php:557 xili-postinpost.php:576
+#: xili-postinpost.php:558 xili-postinpost.php:577
 msgid "Post in post Options Settings"
 msgstr "Réglage des options Post in post "
 
-#: xili-postinpost.php:558 xili-postinpost.php:577
+#: xili-postinpost.php:559 xili-postinpost.php:578
 #, php-format
 msgid ""
 "Before to question dev.xiligroup support, do not forget to visit %s "
@@ -397,11 +398,12 @@ msgstr ""
 "Avant de questionner le support dev.xiligroup, ne pas oublier de consulter "
 "la documentation %s"
 
-#: xili-postinpost.php:569
-msgid "xili-postinpost widget updated"
-msgstr "widget xili-postinpost mis à jour"
+#: xili-postinpost.php:570
+#, php-format
+msgid "%s Post in post widget updated"
+msgstr "widget %s Post in post widget mis à jour"
 
-#: xili-postinpost.php:571
+#: xili-postinpost.php:572
 #, php-format
 msgid ""
 "This version %s adds the new params “more” for content part in widget "
@@ -410,7 +412,7 @@ msgstr ""
 "Cette version %s ajoute un nouveau paramètre “more” utilisé dans le contenu "
 "- pour [shortcode] ou widget."
 
-#: xili-postinpost.php:573
+#: xili-postinpost.php:574
 msgid ""
 "In this example - [condition=‘is_front_page’ query=‘cat=11’ more=‘please "
 "read more’] -, the widget will be displayed only if front_page and with a "
@@ -420,79 +422,79 @@ msgstr ""
 "read more’] -, le widget sera visible si c'est la page d'accueil et le "
 "contenu sera terminé par le lien more “please read more”..."
 
-#: xili-postinpost.php:641 xili-postinpost.php:703
+#: xili-postinpost.php:642 xili-postinpost.php:704
 msgid "no post"
 msgstr "pas d'article"
 
-#: xili-postinpost.php:831
+#: xili-postinpost.php:832
 msgid "Edit This"
 msgstr "Modifier"
 
-#: xili-postinpost.php:864
+#: xili-postinpost.php:865
 msgid "Display post in widget, by ©xiligroup v."
 msgstr "Affiche des articles via un widget par ©xiligroup v."
 
-#: xili-postinpost.php:866
+#: xili-postinpost.php:867
 msgid "Post in post"
 msgstr "Post in post"
 
-#: xili-postinpost.php:1057
+#: xili-postinpost.php:1058
 msgid "Title:"
 msgstr "Titre :"
 
-#: xili-postinpost.php:1059
+#: xili-postinpost.php:1060
 msgid "Show post title"
 msgstr "Affiche le titre"
 
-#: xili-postinpost.php:1059
+#: xili-postinpost.php:1060
 msgid "Title as link"
 msgstr "Titre comme lien"
 
-#: xili-postinpost.php:1060
+#: xili-postinpost.php:1061
 msgid "Show:"
 msgstr "Affiche :"
 
-#: xili-postinpost.php:1060
+#: xili-postinpost.php:1061
 msgid "Content"
 msgstr "Contenu"
 
-#: xili-postinpost.php:1060
+#: xili-postinpost.php:1061
 msgid "Excerpt"
 msgstr "Extrait"
 
-#: xili-postinpost.php:1060
+#: xili-postinpost.php:1061
 msgid "Featured image"
 msgstr "Image en une"
 
-#: xili-postinpost.php:1060
+#: xili-postinpost.php:1061
 msgid "Image as link"
 msgstr "Image comme lien"
 
-#: xili-postinpost.php:1061
+#: xili-postinpost.php:1062
 msgid "Number of posts to show:"
 msgstr "Nombre à afficher :"
 
-#: xili-postinpost.php:1063
+#: xili-postinpost.php:1064
 msgid "Params and conditions:"
 msgstr "Paramètres (et conditions) :"
 
-#: xili-postinpost.php:1067
+#: xili-postinpost.php:1068
 msgid "HTML settings"
 msgstr "Réglages HTML"
 
-#: xili-postinpost.php:1068
+#: xili-postinpost.php:1069
 msgid "Block tags"
 msgstr "Balise du bloc"
 
-#: xili-postinpost.php:1070
+#: xili-postinpost.php:1071
 msgid "Title tags"
 msgstr "Balise du titre"
 
-#: xili-postinpost.php:1073
+#: xili-postinpost.php:1074
 msgid "LI class:"
 msgstr "LI class:"
 
-#: xili-postinpost.php:1074
+#: xili-postinpost.php:1075
 msgid ""
 "Note: if LI class is empty no LI are generated around each post, if set, "
 "don't forget to set above tag's block of results to UL or OL !"
@@ -500,27 +502,27 @@ msgstr ""
 "Note: if LI class is empty no LI are generated around each post, if set, "
 "don't forget to set above tag's block of results to UL or OL !"
 
-#: xili-postinpost.php:1075
+#: xili-postinpost.php:1076
 msgid "Function (must exists)"
 msgstr "Fonction spéciale (doit être présente dans le code)"
 
-#: xili-postinpost.php:1090
+#: xili-postinpost.php:1091
 msgid "Dates of display period"
 msgstr "Période d'affichage"
 
-#: xili-postinpost.php:1091
+#: xili-postinpost.php:1092
 msgid "Leave inputs empty for permanent display."
 msgstr "Laisser les champs vides pour un affichage permanent."
 
-#: xili-postinpost.php:1092
+#: xili-postinpost.php:1093
 msgid "From:"
 msgstr "De :"
 
-#: xili-postinpost.php:1093 xili-postinpost.php:1095
+#: xili-postinpost.php:1094 xili-postinpost.php:1096
 msgid "(aaaa-mm-dd hh:mm)"
 msgstr "(aaaa-mm-jj hh:mm)"
 
-#: xili-postinpost.php:1094
+#: xili-postinpost.php:1095
 msgid "To:"
 msgstr "à :"
 
