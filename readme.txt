@@ -3,7 +3,7 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: 1.4.0
 License: GPLv2
 
@@ -142,7 +142,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2014-03-05 - MS - dev.xiligroup.com
+© 2014-04-18 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
