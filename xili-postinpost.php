@@ -75,7 +75,7 @@ class xili_postinpost {
 
 		if ( is_admin() ) {
 			add_action( 'admin_menu', array( &$this, 'add_setting_pages' ) );
-			add_filter( 'plugin_action_links',  array( &$this, 'filter_plugin_actions' ), 10, 2 );
+			add_filter( 'plugin_action_links', array( &$this, 'filter_plugin_actions' ), 10, 2 );
 			add_action( 'contextual_help', array( &$this, 'add_help_text' ), 10, 3 );
 			add_action( 'admin_head', array( &$this, 'appearance_widget_pointer' ) );
 		}
@@ -83,19 +83,19 @@ class xili_postinpost {
 
 	function initial_settings () {
 		$this->xili_settings = array(
-			    'widget'		=> 'enable',
-			    'displayperiod'		=> '',
-			    'displayhtmltags'   => '', // 0.9.5
-			    'displayeditlink' => '', //1.1.2
-			    'version' 		=> '1.2'
-		    );
+			'widget'		=> 'enable',
+			'displayperiod'		=> '',
+			'displayhtmltags'   => '', // 0.9.5
+			'displayeditlink'   => '', //1.1.2
+			'version'           => '1.2'
+		);
 	}
 
 	function xili_postinpost_activate () {
 		$this->xili_settings = get_option( 'xili_postinpost_settings' );
 		if( empty( $this->xili_settings ) ) {
 			$this->initial_settings ();
-		    update_option( 'xili_postinpost_settings', $this->xili_settings );
+			update_option( 'xili_postinpost_settings', $this->xili_settings );
 		}
 	}
 
@@ -162,7 +162,7 @@ class xili_postinpost {
 		extract( $data );
 		global $wp_version ;
 		if ( '' != $message ) { ?>
-	 		<h4><?php _e('Note:','xili_postinpost') ?></h4>
+			<h4><?php _e('Note:','xili_postinpost') ?></h4>
 			<p><strong><?php echo $message;?></strong></p>
 		<?php } ?>
 		<fieldset style="margin:2px; padding:12px 6px; border:1px solid #ccc;"><legend><?php echo _e('Mail to dev.xiligroup', 'xili_postinpost'); ?></legend>
@@ -231,9 +231,9 @@ class xili_postinpost {
 		if ( isset( $_POST['Submit'] ) ) {
 			check_admin_referer( 'xili-postinpost-settings' );
 			$this->xili_settings['widget'] = (isset ($_POST['widgetenable']) ) ? $_POST['widgetenable'] : "";
-			$this->xili_settings['displayperiod'] = (isset ($_POST['displayperiod']) ) ?  $_POST['displayperiod'] : "";
-			$this->xili_settings['displayeditlink'] = (isset ($_POST['displayeditlink']) ) ?  $_POST['displayeditlink'] : ""; // 1.1.2
-			$this->xili_settings['displayhtmltags'] =  (isset ($_POST['displayhtmltags']) ) ? $_POST['displayhtmltags'] : "";
+			$this->xili_settings['displayperiod'] = (isset ($_POST['displayperiod']) ) ? $_POST['displayperiod'] : "";
+			$this->xili_settings['displayeditlink'] = (isset ($_POST['displayeditlink']) ) ? $_POST['displayeditlink'] : ""; // 1.1.2
+			$this->xili_settings['displayhtmltags'] = (isset ($_POST['displayhtmltags']) ) ? $_POST['displayhtmltags'] : "";
 
 			update_option('xili_postinpost_settings', $this->xili_settings);
 			$msg = 1;
@@ -257,16 +257,16 @@ class xili_postinpost {
 			$contextual_arr[] = $this->xili_settings['webmestre-level'];
 
 			$headers = 'From: Xili-PostinPost Page <' . get_bloginfo ('admin_email').'>' . "\r\n" ;
-   			if ( '' != $_POST['ccmail'] ) $headers .= 'Cc: <'.$_POST['ccmail'].'>' . "\r\n";
-   			$headers .= "\\";
-   			$message = "Message sent by: ".get_bloginfo ('admin_email')."\n\n" ;
-   			$message .= "Subject: ".$_POST['subject']."\n\n" ;
-   			$message .= "Topic: ".$_POST['thema']."\n\n" ;
-   			$message .= "Content: ".$_POST['mailcontent']."\n\n" ;
-   			$message .= "Checked contextual infos: ". implode ( ', ', $contextual_arr ) ."\n\n" ;
-   			$message .= "This message was sent by webmaster in xili-postinpost plugin settings page.\n\n";
-   			$message .= "\n\n";
-   			$result = wp_mail('contact@xiligroup.com', $_POST['thema'].' from xili-PostinPost plugin v.'.XILI_PIP_VERSION.' settings Page.' , $message, $headers );
+			if ( '' != $_POST['ccmail'] ) $headers .= 'Cc: <'.$_POST['ccmail'].'>' . "\r\n";
+			$headers .= "\\";
+			$message = "Message sent by: ".get_bloginfo ('admin_email')."\n\n" ;
+			$message .= "Subject: ".$_POST['subject']."\n\n" ;
+			$message .= "Topic: ".$_POST['thema']."\n\n" ;
+			$message .= "Content: ".$_POST['mailcontent']."\n\n" ;
+			$message .= "Checked contextual infos: ". implode ( ', ', $contextual_arr ) ."\n\n" ;
+			$message .= "This message was sent by webmaster in xili-postinpost plugin settings page.\n\n";
+			$message .= "\n\n";
+			$result = wp_mail('contact@xiligroup.com', $_POST['thema'].' from xili-PostinPost plugin v.'.XILI_PIP_VERSION.' settings Page.' , $message, $headers );
 
 			$msg = 2;
 			$message = sprintf( __( 'Thanks for your email. A copy was sent to %s (%s)','xili_postinpost' ), $_POST['ccmail'], $result ) ;
@@ -365,26 +365,26 @@ class xili_postinpost {
 										<input type="hidden" id="displayhtmltags" name="displayhtmltags" value="<?php echo $this->xili_settings['displayhtmltags'] ?>"  />
 								<?php } ?>
 							</fielset>
-	   						<p class="submit"><input type="submit" name="Submit" id="Submit" value="<?php _e('Save Changes'); ?> &raquo;" /></p>
+								<p class="submit"><input type="submit" name="Submit" id="Submit" value="<?php _e('Save Changes'); ?> &raquo;" /></p>
 
-	   					<?php if( $this->xili_settings['widget']=='enable') { ?>
-	   						<div class="widefat" style="margin:20px 0; padding:10px; width:95%;">
-	   							<h4><?php _e( 'Syntax examples in widget setting UI','xili_postinpost'); ?></h4>
-	   							<h5><?php _e( 'Here simple query','xili_postinpost'); ?></h5>
-	   								<p><?php _e( 'A post display with title and excerpt','xili_postinpost'); ?></p>
-	   								<img src="<?php echo plugins_url( 'screenshot-1.png', __FILE__ ); ?>" alt=""/>
-	   							<h5><?php _e( 'Here conditional query','xili_postinpost'); ?></h5>
-	   								<p><?php _e( 'Three posts of category 3 displayed with title and link IF a page is displayed (with two widgets options set):','xili_postinpost'); ?></p>
-	   								<img src="<?php echo plugins_url( 'screenshot-2.png', __FILE__ ); ?>" alt=""/>
-	   							<h5><?php _e( 'Another conditional query','xili_postinpost'); ?></h5>
-	   								<p><?php _e( 'True and false conditions example: what happens and when ?','xili_postinpost'); ?></p>
-	   								<img src="<?php echo plugins_url( 'screenshot-3.png', __FILE__ ); ?>" alt=""/>
-	   							<h5><?php _e( 'Another query with multilingual context','xili_postinpost'); ?></h5>
-	   								<p><?php _e( 'A query combined with current language (requires xili-language active)','xili_postinpost'); ?></p>
-	   								<img src="<?php echo plugins_url( 'screenshot-4.png', __FILE__ ); ?>" alt=""/>
-	   						</div>
-	   					<?php } ?>
-	   					<h4><a href="http://dev.xiligroup.com/xili-postinpost" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'xilipostinpost-logo-32.png', __FILE__ ) ; ?>" alt="xili-postinpost logo"/>  xili-postinpost</a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e('Author'); ?>" >xiligroup.com</a>™ - msc 2009-2014 - v. <?php echo XILI_PIP_VERSION; ?></h4>
+							<?php if( $this->xili_settings['widget']=='enable') { ?>
+								<div class="widefat" style="margin:20px 0; padding:10px; width:95%;">
+									<h4><?php _e( 'Syntax examples in widget setting UI','xili_postinpost'); ?></h4>
+									<h5><?php _e( 'Here simple query','xili_postinpost'); ?></h5>
+										<p><?php _e( 'A post display with title and excerpt','xili_postinpost'); ?></p>
+										<img src="<?php echo plugins_url( 'screenshot-1.png', __FILE__ ); ?>" alt=""/>
+									<h5><?php _e( 'Here conditional query','xili_postinpost'); ?></h5>
+										<p><?php _e( 'Three posts of category 3 displayed with title and link IF a page is displayed (with two widgets options set):','xili_postinpost'); ?></p>
+										<img src="<?php echo plugins_url( 'screenshot-2.png', __FILE__ ); ?>" alt=""/>
+									<h5><?php _e( 'Another conditional query','xili_postinpost'); ?></h5>
+										<p><?php _e( 'True and false conditions example: what happens and when ?','xili_postinpost'); ?></p>
+										<img src="<?php echo plugins_url( 'screenshot-3.png', __FILE__ ); ?>" alt=""/>
+									<h5><?php _e( 'Another query with multilingual context','xili_postinpost'); ?></h5>
+										<p><?php _e( 'A query combined with current language (requires xili-language active)','xili_postinpost'); ?></p>
+										<img src="<?php echo plugins_url( 'screenshot-4.png', __FILE__ ); ?>" alt=""/>
+								</div>
+							<?php } ?>
+							<h4><a href="http://dev.xiligroup.com/xili-postinpost" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'xilipostinpost-logo-32.png', __FILE__ ) ; ?>" alt="xili-postinpost logo"/>  xili-postinpost</a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e('Author'); ?>" >xiligroup.com</a>™ - msc 2009-2014 - v. <?php echo XILI_PIP_VERSION; ?></h4>
 						</div>
 
 					</div>
@@ -427,58 +427,58 @@ class xili_postinpost {
 	 *
 	 * @since 1.7.0
 	 */
-	 function add_help_text( $contextual_help, $screen_id, $screen ) {
+	function add_help_text( $contextual_help, $screen_id, $screen ) {
 
-	  //echo $screen_id;
+	//echo $screen_id;
 
-	  if ('settings_page_xili_postinpost_page' == $screen->id ) {
-	    $to_remember =
-	      '<p>' . __('Things to remember to set xili-postinpost:','xili_postinpost') . '</p>' .
-	      '<ul>' .
-	      '<li>' . __('Verify that the theme can use widget.','xili_postinpost') . '</li>' .
-	      '<li>' . __('As developer, visit <a href="http://dev.xiligroup.com/?forum=other-plugins" target="_blank">dev.xiligroup forum</a> to discover powerful features and filters to customize your results.','xili_postinpost') . '</li>' .
-	      '<li>' . __('Visit dev.xiligroup website.','xili_postinpost') . '</li>' .
-
-
-	      '</ul>' ;
-
-	     $options =
-	      '<p>' . __('In xili-postinpost settings it possible to set general options:','xili_postinpost') . '</p>' .
-	      '<ul>' .
-	      '<li>' . __('Insert Edit link: add automatically the link after the post in the series. Can also be set as parameters in query (displayeditlink). The local parameter has priority.','xili_postinpost') . '</li>' .
-	      '<li>' . __('Post in post Widget available in Appearance screen','xili_postinpost') . '<ol>' .
-	      '<li>' . __('Display period available inside widget settings window.','xili_postinpost') . '</li>' .
-	      '<li>' . __('HTML tags settings inside widget window.','xili_postinpost') . '</li></ol></li>' .
-	      '</ul>' ;
+	if ('settings_page_xili_postinpost_page' == $screen->id ) {
+		$to_remember =
+		'<p>' . __('Things to remember to set xili-postinpost:','xili_postinpost') . '</p>' .
+		'<ul>' .
+		'<li>' . __('Verify that the theme can use widget.','xili_postinpost') . '</li>' .
+		'<li>' . __('As developer, visit <a href="http://dev.xiligroup.com/?forum=other-plugins" target="_blank">dev.xiligroup forum</a> to discover powerful features and filters to customize your results.','xili_postinpost') . '</li>' .
+		'<li>' . __('Visit dev.xiligroup website.','xili_postinpost') . '</li>' .
 
 
-	     $more_infos =
-	      	'<p><strong>' . __('For more information:') . '</strong></p>' .
-	      	'<p>' . __('<a href="http://dev.xiligroup.com/xili-postinpost" target="_blank">Xili-PostinPost Plugin Documentation</a>','xili_postinpost') . '</p>' .
-	      	'<p>' . __('<a href="http://wiki.xiligroup.org/" target="_blank">Xili Wiki Documentation</a>','xili_postinpost') . '</p>' .
-	    	'<p>' . __('<a href="http://dev.xiligroup.com/?forum=other-plugins" target="_blank">Support Forums</a>','xili_postinpost') . '</p>' .
-	    	'<p>' . __('<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>','xili_postinpost') . '</p>' ;
+		'</ul>' ;
+
+		$options =
+		'<p>' . __('In xili-postinpost settings it possible to set general options:','xili_postinpost') . '</p>' .
+		'<ul>' .
+		'<li>' . __('Insert Edit link: add automatically the link after the post in the series. Can also be set as parameters in query (displayeditlink). The local parameter has priority.','xili_postinpost') . '</li>' .
+		'<li>' . __('Post in post Widget available in Appearance screen','xili_postinpost') . '<ol>' .
+		'<li>' . __('Display period available inside widget settings window.','xili_postinpost') . '</li>' .
+		'<li>' . __('HTML tags settings inside widget window.','xili_postinpost') . '</li></ol></li>' .
+		'</ul>' ;
 
 
-	  	$screen->add_help_tab( array(
- 				'id'      => 'to-remember',
-				'title'   => __('Things to remember','xili_postinpost'),
-				'content' => $to_remember,
-		  ));
+		$more_infos =
+			'<p><strong>' . __('For more information:') . '</strong></p>' .
+			'<p>' . __('<a href="http://dev.xiligroup.com/xili-postinpost" target="_blank">Xili-PostinPost Plugin Documentation</a>','xili_postinpost') . '</p>' .
+			'<p>' . __('<a href="http://wiki.xiligroup.org/" target="_blank">Xili Wiki Documentation</a>','xili_postinpost') . '</p>' .
+		'<p>' . __('<a href="http://dev.xiligroup.com/?forum=other-plugins" target="_blank">Support Forums</a>','xili_postinpost') . '</p>' .
+		'<p>' . __('<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>','xili_postinpost') . '</p>' ;
 
-		 $screen->add_help_tab( array(
- 				'id'      => 'options',
-				'title'   => __('Available options','xili_postinpost'),
-				'content' => $options,
-		  ));
 
-	   	$screen->add_help_tab( array(
- 				'id'      => 'more-infos',
-				'title'   => __('For more information', 'xili_postinpost'),
+		$screen->add_help_tab( array(
+			'id' => 'to-remember',
+			'title' => __('Things to remember','xili_postinpost'),
+			'content' => $to_remember,
+		));
+
+		$screen->add_help_tab( array(
+			'id' => 'options',
+			'title' => __('Available options','xili_postinpost'),
+			'content' => $options,
+		));
+
+		$screen->add_help_tab( array(
+			'id' => 'more-infos',
+			'title' => __('For more information', 'xili_postinpost'),
 			'content' => $more_infos,
 		));
-	  }
-	  return $contextual_help;
+		}
+		return $contextual_help;
 	}
 
 	// called by each pointer
@@ -490,7 +490,7 @@ class xili_postinpost {
 	}
 
 	// insert the pointers registered before
-	function print_the_pointers_js (  ) {
+	function print_the_pointers_js ( ) {
 		if ( $this->news_id != 0 ) {
 			for ($i = 1; $i <= $this->news_id; $i++) {
 				$this->print_pointer_js ( $i );
@@ -498,7 +498,7 @@ class xili_postinpost {
 		}
 	}
 
-	function print_pointer_js ( $indice  ) {  ;
+	function print_pointer_js ( $indice ) {
 
 		$args = $this->localize_admin_js( $this->news_case[$indice], $indice );
 		if ( $args['pointerText'] != '' ) { // only if user don't read it before
@@ -507,19 +507,19 @@ class xili_postinpost {
 		//<![CDATA[
 		jQuery(document).ready( function() {
 
- 	var strings<?php echo $indice; ?> = <?php echo json_encode( $args ); ?>;
+		var strings<?php echo $indice; ?> = <?php echo json_encode( $args ); ?>;
 
 	<?php /** Check that pointer support exists AND that text is not empty - inspired www.generalthreat.com */ ?>
 
 	if(typeof(jQuery().pointer) != 'undefined' && strings<?php echo $indice; ?>.pointerText != '') {
 		jQuery( strings<?php echo $indice; ?>.pointerDiv ).pointer({
-			content    : strings<?php echo $indice; ?>.pointerText,
+			content : strings<?php echo $indice; ?>.pointerText,
 			position: { edge: strings<?php echo $indice; ?>.pointerEdge,
 				at: strings<?php echo $indice; ?>.pointerAt,
 				my: strings<?php echo $indice; ?>.pointerMy,
 				offset: strings<?php echo $indice; ?>.pointerOffset
 			},
-			close  : function() {
+			close : function() {
 				jQuery.post( ajaxurl, {
 					pointer: strings<?php echo $indice; ?>.pointerDismiss,
 					action: 'dismiss-wp-pointer'
@@ -541,15 +541,15 @@ class xili_postinpost {
 	 *
 	 */
 	function localize_admin_js( $case_news, $news_id ) {
- 			$about = __('Docs about xili-postinpost', 'xili_postinpost');
- 			$pointer_edge = '';
- 			$pointer_at = '';
- 			$pointer_my = '';
- 			$pointer_Offset = '';
- 		switch ( $case_news ) {
+				$about = __('Docs about xili-postinpost', 'xili_postinpost');
+				$pointer_edge = '';
+				$pointer_at = '';
+				$pointer_my = '';
+				$pointer_Offset = '';
+			switch ( $case_news ) {
 
- 			case 'xpp_new_version' :
- 				$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post updated', 'xili_postinpost'), '[©xili]') ) . '</h3>';
+				case 'xpp_new_version' :
+					$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post updated', 'xili_postinpost'), '[©xili]') ) . '</h3>';
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-postinpost was updated to version %s', 'xili_postinpost' ) , XILI_PIP_VERSION) ). '.</p>';
 
 				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s adds previewing feature for theme/customize/widget (WP 3.9+)', 'xili_postinpost'), XILI_PIP_VERSION) ). '.</p>';
@@ -558,17 +558,17 @@ class xili_postinpost {
 
 				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili_postinpost' ).' “<a href="options-general.php?page=xili_postinpost_page">'. __('Post in post Options Settings','xili_postinpost')."</a>”" ). '.</p>';
 				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili_postinpost' ), '<a href="http://wordpress.org/plugins/xili-postinpost/" title="'.$about.'" >wiki</a>' ) ). '.</p>';
- 				$pointer_dismiss = 'xpp-new-version-'.str_replace('.', '-', XILI_PIP_VERSION);
+					$pointer_dismiss = 'xpp-new-version-'.str_replace('.', '-', XILI_PIP_VERSION);
 
- 				$pointer_div = '#menu-settings';
+					$pointer_div = '#menu-settings';
 
- 				$pointer_edge = 'left';
- 				$pointer_my = 'left';
- 				$pointer_at = 'right';
+					$pointer_edge = 'left';
+					$pointer_my = 'left';
+					$pointer_at = 'right';
 				break;
 
 			case 'xpp_new_features_widget' :
- 				$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post widget updated', 'xili_postinpost'), '[©xili]') ) . '</h3>';
+					$pointer_text = '<h3>' . esc_js( sprintf( __( '%s Post in post widget updated', 'xili_postinpost'), '[©xili]') ) . '</h3>';
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-postinpost was updated to version %s', 'xili_postinpost' ) , XILI_PIP_VERSION) ). '.</p>';
 
 				$pointer_text .= '<p>' . esc_js( sprintf(__( 'This version %s adds previewing feature for theme/customize (WP 3.9+)', 'xili_postinpost'), XILI_PIP_VERSION) ). '.</p>';
@@ -580,26 +580,26 @@ class xili_postinpost {
 
 				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili_postinpost' ).' “<a href="options-general.php?page=xili_postinpost_page">'. __('Post in post Options Settings','xili_postinpost')."</a>”" ). '.</p>';
 				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili_postinpost' ), '<a href="http://wordpress.org/plugins/xili-postinpost/" title="'.$about.'" >wiki</a>' ) ). '.</p>';
- 				$pointer_dismiss = 'xpp-new-features-'.str_replace('.', '-', XILI_PIP_VERSION);
+					$pointer_dismiss = 'xpp-new-features-'.str_replace('.', '-', XILI_PIP_VERSION);
 
- 				$pointer_div = '#available-widgets';
+					$pointer_div = '#available-widgets';
 
- 				$pointer_edge = 'left'; // arrow
- 				$pointer_my = 'left bottom'; // left of pointer box
- 				$pointer_at = 'right'; // right of div
+					$pointer_edge = 'left'; // arrow
+					$pointer_my = 'left bottom'; // left of pointer box
+					$pointer_at = 'right'; // right of div
 				break;
 
 			default: // nothing
 				$pointer_text = '';
 		}
 
- 			// inspired from www.generalthreat.com
+		// inspired from www.generalthreat.com
 		// Get the list of dismissed pointers for the user
 		$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
 		if ( in_array( $pointer_dismiss, $dismissed ) && $pointer_dismiss == 'xd-new-version-'.str_replace('.', '-', XILIDICTIONARY_VER) ) {
 			$pointer_text = '';
 		// Check whether our pointer has been dismissed two times
-		} elseif ( in_array( $pointer_dismiss, $dismissed )  ) { /*&& in_array( $pointer_dismiss.'-1', $dismissed ) */
+		} elseif ( in_array( $pointer_dismiss, $dismissed ) ) { /*&& in_array( $pointer_dismiss.'-1', $dismissed ) */
 			$pointer_text = '';
 		} //elseif ( in_array( $pointer_dismiss, $dismissed ) ) {
 		// $pointer_dismiss = $pointer_dismiss.'-1';
@@ -615,7 +615,7 @@ class xili_postinpost {
 			'pointerOffset' => $pointer_Offset, // seems to be unused in WP 3.8+
 			'newsID' => $news_id
 		);
-    }
+	}
 
 } // end class
 
@@ -727,13 +727,13 @@ function xi_postinpost( $args = '' ) {
 	$tmp_pagenow = $pagenow;
 
 
-	if ( !is_array( $query ) && '' != $query ) { /* $query is here a string  */
+	if ( !is_array( $query ) && '' != $query ) { /* $query is here a string */
 		$query = html_entity_decode( $query );
 		if ( $showposts > 0 && strstr( $query, 'showposts' ) === false && substr ( $query, 0, 1 ) != '_' ) $query .= "&showposts=" . $showposts;
 	}
 
 	if ( !is_array( $args ) ) $args = array( $args );
-	$query_key = 'post_in_post' . md5( serialize( $query ) );  //
+	$query_key = 'post_in_post' . md5( serialize( $query ) );	//
 
 	if ( $is_preview ) {
 		$result = false; // WP 3.9+ && customize in theme
@@ -744,7 +744,7 @@ function xi_postinpost( $args = '' ) {
 	if ( false !== $result ) { //echo 'cache used in same page because query called more than one time';
 		$myposts = $result;
 	} else {
-		$myposts = new WP_Query ( apply_filters ( 'xili_postinpost_query', $query ) );  // 1.2  to use complex presetted queries
+		$myposts = new WP_Query ( apply_filters ( 'xili_postinpost_query', $query ) );	// 1.2	to use complex presetted queries
 	}
 
 	if ( $myposts->have_posts() ) :
@@ -753,46 +753,46 @@ function xi_postinpost( $args = '' ) {
 			// function my_pip_loop ( $params, $the_posts ) { loop inside your function }
 			$postinpostresult = call_user_func_array ( $userfunction, array ( $r, $myposts ) );
 		} else {
-	 		$postinpostresult .= $beforeall;
-	 		while ( $myposts->have_posts() ) :
-	 			$myposts->the_post();
+			$postinpostresult .= $beforeall;
+			while ( $myposts->have_posts() ) :
+				$myposts->the_post();
 
-	 			// add class if LI tag is used - class because multiple instantiations - 0.9.5
-	 			$startchars = substr( $beforeeach, 0, 3 );
-	 			$startcharsclass = substr( $beforeeach, 0, 11 );
-	 			if ( strtolower( $startchars )  == '<li' ) {
-	 				if ( strtolower( $startcharsclass ) == '<li class="' ) { // as set in widget
-	 					$beforeeach_id = $startcharsclass.'xpipid-'. $post->ID .' '.substr( $beforeeach, 11 ) ;
-	 				} else {
-	 					$beforeeach_id = $beforeeach ;
-	 				}
-	 			} else {
-	 				$beforeeach_id = $beforeeach ;
-	 			}
+				// add class if LI tag is used - class because multiple instantiations - 0.9.5
+				$startchars = substr( $beforeeach, 0, 3 );
+				$startcharsclass = substr( $beforeeach, 0, 11 );
+				if ( strtolower( $startchars ) == '<li' ) {
+					if ( strtolower( $startcharsclass ) == '<li class="' ) { // as set in widget
+						$beforeeach_id = $startcharsclass.'xpipid-'. $post->ID .' '.substr( $beforeeach, 11 ) ;
+					} else {
+						$beforeeach_id = $beforeeach ;
+					}
+				} else {
+					$beforeeach_id = $beforeeach ;
+				}
 
-	 			$postinpostresult .= $beforeeach_id;
+				$postinpostresult .= $beforeeach_id;
 
-	 			if ($showtitle) {
-	 				if (!$titlelink) :
-				    	$postinpostresult .= the_title($beforetitle,$aftertitle, false);
-				    else:
-				    	$postinpostresult .= $beforetitle.'<a href="'.get_permalink($post->ID).'" title="'.__( $read, the_text_domain() ).'">'.the_title('','', false).'</a>'.$aftertitle;
-				    endif;
-	 			}
-	 			if ( $featuredimage and null != get_post_thumbnail_id( $post->ID )) { //
-	 				if ( $featuredimageaslink ) { // fixed
-	 					$postinpostresult .= '<a href="'.get_permalink($post->ID).'" title="'.__( $read, the_text_domain() ).'">'.get_the_post_thumbnail( $post->ID, $featuredimagesize ).'</a>';
-	 				} else {
-	 					$postinpostresult .= get_the_post_thumbnail( $post->ID, $featuredimagesize );
-	 				}
+				if ($showtitle) {
+					if (!$titlelink) :
+						$postinpostresult .= the_title($beforetitle,$aftertitle, false);
+					else:
+						$postinpostresult .= $beforetitle.'<a href="'.get_permalink($post->ID).'" title="'.__( $read, the_text_domain() ).'">'.the_title('','', false).'</a>'.$aftertitle;
+					endif;
+				}
+				if ( $featuredimage and null != get_post_thumbnail_id( $post->ID )) { //
+					if ( $featuredimageaslink ) { // fixed
+						$postinpostresult .= '<a href="'.get_permalink($post->ID).'" title="'.__( $read, the_text_domain() ).'">'.get_the_post_thumbnail( $post->ID, $featuredimagesize ).'</a>';
+					} else {
+						$postinpostresult .= get_the_post_thumbnail( $post->ID, $featuredimagesize );
+					}
 
-	 			}
+				}
 
-				if ( $showexcerpt )
-				   $postinpostresult .= $beforeexcerpt.apply_filters('the_excerpt', get_the_excerpt()).$afterexcerpt;
-				if ( $showcontent )
-				   $postinpostresult .= $beforecontent.apply_filters('the_content',get_the_content( $r['more'] )).$aftercontent;
-				// $r['more'] => $more is a WP global variable !!!
+			if ( $showexcerpt )
+				$postinpostresult .= $beforeexcerpt.apply_filters('the_excerpt', get_the_excerpt()).$afterexcerpt;
+			if ( $showcontent )
+				$postinpostresult .= $beforecontent.apply_filters('the_content',get_the_content( $r['more'] )).$aftercontent;
+		// $r['more'] => $more is a WP global variable !!!
 				// 1.1.2 add edit link
 
 				$postinpostresult = xili_post_in_post_insert_edit_link ( $postinpostresult, $r, $post );
@@ -803,7 +803,7 @@ function xi_postinpost( $args = '' ) {
 			$postinpostresult .= $afterall;
 		}
 	else :
-	 	$postinpostresult = $nopost ;	// 1.1.2 - $nopost
+		$postinpostresult = $nopost ;	// 1.1.2 - $nopost
 	endif;
 	/*restore current loop */
 	$wp_query = null ; $wp_query = $tmp_query;
@@ -816,7 +816,7 @@ function xi_postinpost( $args = '' ) {
 	$more = $tmp_more;
 	$pagenow = $tmp_pagenow ;
 
- 	wp_cache_set($query_key, $myposts, 'postinpost') ; // only the query is cached - not the format tags
+	wp_cache_set($query_key, $myposts, 'postinpost') ; // only the query is cached - not the format tags
 
 	return $postinpostresult;
 }
@@ -839,7 +839,7 @@ function xili_post_in_post_insert_edit_link ( $postinpostresult, $r, $post ) {
 	}
 
 	if ( $addlink ) {
-		$link = ( is_numeric ( $displayeditlink ) ) ? __('Edit This', the_text_domain() ) : $displayeditlink   ;
+		$link = ( is_numeric ( $displayeditlink ) ) ? __('Edit This', the_text_domain() ) : $displayeditlink ;
 
 		$post_type_obj = get_post_type_object( $post->post_type );
 
@@ -907,8 +907,8 @@ class xili_post_in_post_Widget extends WP_Widget {
 			$text = apply_filters( 'widget_text', $instance['text'], $instance );
 			$pos = strpos($text, '[');
 			if ($pos === false) { // classical query
-	   			$query = $text ;
-	   			$condition_ok = true;
+					$query = $text ;
+					$condition_ok = true;
 			} else {
 
 				$default_params = array( 'more'=> 'toto', 'query' =>'', 'condition'=>'', 'param'=>'', 'lang'=>'', 'beforeall'=> null, 'afterall'=> null, 'postmetakey' => '', 'postmetafrom' => ''); // null to keep defaults main function of xi_postinpost
@@ -923,29 +923,29 @@ class xili_post_in_post_Widget extends WP_Widget {
 					$noflow = str_replace(']', '', $thetwo[1]);
 				}
 
-	 			$flow_atts =  shortcode_parse_atts($flow);
+					$flow_atts = shortcode_parse_atts($flow);
 
-	 			$arr_result = shortcode_atts($default_params, $flow_atts);
+					$arr_result = shortcode_atts($default_params, $flow_atts);
 				$thecondition = trim( $arr_result['condition'], '!');
 
-	 			if ( '' != $arr_result['condition'] && function_exists( $thecondition ) ) {
-	 				$not = ( $thecondition == $arr_result['condition'] ) ? false : true ;
-	 				$arr_params = ('' != $arr_result['param']) ? array(explode( ',', $arr_result['param'] )) : array();
-	 			 	$condition_ok = ($not) ? !call_user_func_array ($thecondition, $arr_params) : call_user_func_array ($thecondition, $arr_params);
+					if ( '' != $arr_result['condition'] && function_exists( $thecondition ) ) {
+						$not = ( $thecondition == $arr_result['condition'] ) ? false : true ;
+						$arr_params = ('' != $arr_result['param']) ? array(explode( ',', $arr_result['param'] )) : array();
+						$condition_ok = ($not) ? !call_user_func_array ($thecondition, $arr_params) : call_user_func_array ($thecondition, $arr_params);
 
-	 				if ( !$condition_ok && ""!= $noflow ) { // check no condition
-	 					$flow_atts =  shortcode_parse_atts($noflow); // echo 'no='.$noflow.')';
-			 			$arr_result = shortcode_atts($default_params, $flow_atts); // new keys of second block
-			 			$arr_params = ('' != $arr_result['param']) ? array(explode( ',', $arr_result['param'] )) : array();
+						if ( !$condition_ok && ""!= $noflow ) { // check no condition
+							$flow_atts = shortcode_parse_atts($noflow); // echo 'no='.$noflow.')';
+						$arr_result = shortcode_atts($default_params, $flow_atts); // new keys of second block
+						$arr_params = ('' != $arr_result['param']) ? array(explode( ',', $arr_result['param'] )) : array();
 						$thecondition = trim( $arr_result['condition'], '!' );
 						$not = ( $thecondition == $arr_result['condition'] ) ? false : true ;
 						if ( '' != $arr_result['condition'] && function_exists( $thecondition ) ) {
-	 			 			$condition_ok = ($not) ? !call_user_func_array ( $thecondition, $arr_params ) : call_user_func_array ( $thecondition, $arr_params ); // if false nothing displayed
-			 			} else {
+								$condition_ok = ($not) ? !call_user_func_array ( $thecondition, $arr_params ) : call_user_func_array ( $thecondition, $arr_params ); // if false nothing displayed
+						} else {
 							$condition_ok = true; // display results of $query or postmeta
 						}
-	 				}
-	 			} else {
+						}
+					} else {
 					$condition_ok = true;
 				}
 				$query = $arr_result['query'];
@@ -968,9 +968,9 @@ class xili_post_in_post_Widget extends WP_Widget {
 			}
 
 			if ( ! $number = (int) $instance['showposts'] )
-	 			$number = 1;
-	 		else if ( $number < 1 )
-	 			$number = 1;
+				$number = 1;
+			else if ( $number < 1 )
+				$number = 1;
 
 			if ( $condition_ok ) {
 				echo $before_widget;
@@ -995,7 +995,7 @@ class xili_post_in_post_Widget extends WP_Widget {
 					if ( isset($instance['beforetitle']) ) $theargs ['beforetitle'] = $instance['beforetitle'];
 					if ( isset($instance['aftertitle']) ) $theargs ['aftertitle'] = $instance['aftertitle'];
 
-					if ( isset($instance['liclass'])  && $instance['liclass'] !="" ) {
+					if ( isset($instance['liclass']) && $instance['liclass'] !="" ) {
 						$theargs ['beforeeach'] = '<li class="'.$instance['liclass'].'">'; // 0.9.5
 						$theargs ['aftereach'] = '</li>';
 					}
@@ -1006,7 +1006,7 @@ class xili_post_in_post_Widget extends WP_Widget {
 						$theargs = array_merge( $the_arr_result, $theargs );
 					}
 
-					if  ( method_exists($this,'is_preview') ) { // 3.9 and customize
+					if ( method_exists($this,'is_preview') ) { // 3.9 and customize
 						if ( $this->is_preview() ) {
 							$theargs['is_preview'] = true;
 						} else {
@@ -1033,7 +1033,7 @@ class xili_post_in_post_Widget extends WP_Widget {
 		$instance = $old_instance;
 		$instance['title'] = strip_tags($new_instance['title']);
 		if ( current_user_can('unfiltered_html') )
-			$instance['text'] =  $new_instance['text'];
+			$instance['text'] = $new_instance['text'];
 		else
 			$instance['text'] = stripslashes( wp_filter_post_kses( addslashes($new_instance['text']) ) ); // wp_filter_post_kses() expects slashed
 		$instance['filter'] = isset($new_instance['filter']);
