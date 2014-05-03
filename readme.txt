@@ -3,8 +3,8 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
-Tested up to: 3.9
-Stable tag: 1.4.0
+Tested up to: 3.9.1
+Stable tag: 1.4.1
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -27,8 +27,8 @@ In widget (if xili-language active) to combine a query and the current language 
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
-= New with 1.4.0 : =
-* Last Updated 2014-03-05
+= New with 1.4.1 : =
+* Last Updated 2014-05-02
 * see [tab and chapters in changelog](http://wordpress.org/extend/plugins/xili-postinpost/changelog/)
 
 
@@ -101,10 +101,13 @@ Run [live here](http://dev.xiligroup.com/)
 3. widget settings UI for a two conditional queries.
 4. widget settings UI for a query combined with current language (requires xili-language).
 5. widget settings UI: in this case, Featured images of category ID11 will be listed in ul li list according current language.
+6. appearance - customize - widget settings UI: real time results during settings (WP 3.9+)
 
 == Changelog ==
+= 1.4.1 =
+* 2014-05-02 - incorporate is_preview method used in theme customize (no cache) for realtime settings
 = 1.4.0 =
-* new param "more" for get_the_content
+* 2014-03-05 - new param "more" for get_the_content
 * Text Domain added in header
 * add 2 wp-pointers
 = 1.3.0 =
@@ -142,7 +145,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2014-04-18 - MS - dev.xiligroup.com
+© 2014-05-02 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
