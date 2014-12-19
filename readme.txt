@@ -3,7 +3,7 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
-Tested up to: 4.1-beta2
+Tested up to: 4.1
 Stable tag: 1.5.2
 License: GPLv2
 
@@ -28,7 +28,7 @@ In widget (if xili-language active) to combine a query and the current language 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
 = New with 1.5.2 : =
-* Last Updated 2014-12-10
+* Last Updated 2014-12-19
 * see [tab and chapters in changelog](http://wordpress.org/extend/plugins/xili-postinpost/changelog/)
 
 
@@ -103,7 +103,7 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 = 1.5.2 =
-* 2014-12-11 - 1.5.2 - WPLANG as function - WP 4.0+ - add do_action before/after widget_text filter (to patch Karma theme - Thanks to Ella)
+* 2014-12-18 - 1.5.2 - WPLANG as function - WP 4.0+ - add do_action before/after widget_text filter (to patch Karma theme - Thanks to Ella)
 = 1.5.1 =
 * fixes assets images src
 = 1.5.0 =
@@ -149,7 +149,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2014-12-11 - MS - dev.xiligroup.com
+© 2014-12-18 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
