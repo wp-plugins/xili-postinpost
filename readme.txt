@@ -3,7 +3,7 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: 1.5.3
 License: GPLv2
 
@@ -26,6 +26,8 @@ In widget (and template tag), if option is set, it is possible to choose display
 In widget (if xili-language active) to combine a query and the current language use params like `[query="cat=14" lang="cur"]` with square bracket`[]` and lang set cur. Don't put *cur* in query. See [screenshot](http://wordpress.org/plugins/xili-postinpost/screenshots/).
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
+
+Paging is preserved even if a shortcode is used in a list of posts.
 
 = New with 1.5.3 : =
 * Last Updated 2014-12-22
@@ -65,7 +67,6 @@ YES, see below an example using array and userfunction (formatting the result of
 <?php echo xi_postinpost( array( 'showposts' => '4' , 'query' => array( 'category__and' => array( $cat_id, 7 ) ), 'userfunction' => 'xili_pip_banner' ) ); ?>
 
 `
-
 = What is - conditional - display ? =
 
 Currently the result of widget is ever displayed. Here it is possible to use function (currents or made by webmaster) to decide when to display according context. By example if you use `is_page`, if the condition return true, the widget show the result here when a page is displayed in website. Another example with `is_category` and params `1,5,87` in the query input : when one these three categories is shown, the widget show the resulting list.
@@ -74,6 +75,9 @@ Currently the result of widget is ever displayed. Here it is possible to use fun
 
 If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible
 to create and use a conditional function created by you (in functions.php).
+
+= In widget, what the code to see latest posts in current language ?
+Very simple : `[lang='cur']`
 
 = When using shortcode, the result display excerpt under the title, why ? =
 
@@ -103,6 +107,7 @@ Run [live here](http://dev.xiligroup.com/)
 
 == Changelog ==
 = 1.5.3 =
+* 2015-04-21 readme updated for WP 4.2
 * 2014-12-22 improves query if permalinks, inside front_page and xili_language active
 = 1.5.2 =
 * 2014-12-18 WPLANG as function - WP 4.0+ - add do_action before/after widget_text filter (to patch Karma theme - Thanks to Ella)
@@ -151,7 +156,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2014-12-22 - MS - dev.xiligroup.com
+© 2015-04-21 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
