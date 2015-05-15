@@ -23,7 +23,7 @@ are available for developers, authors and webmasters.
 
 In widget (and template tag), if option is set, it is possible to choose display period and expiration date.
 
-In widget (if xili-language active) to combine a query and the current language use params like `[query="cat=14" lang="cur"]` with square bracket`[]` and lang set cur. Don't put *cur* in query. See [screenshot](http://wordpress.org/plugins/xili-postinpost/screenshots/).
+In widget - if [xili-language plugin](https://wordpress.org/plugins/xili-language/) active - to combine a query and the current language use params like `[query="cat=14" lang="cur"]` with square bracket`[]` and lang set cur. Don't put *cur* in query. See [screenshot](http://wordpress.org/plugins/xili-postinpost/screenshots/).
 
 For each post of the resulting list, the displayed result is hightly customizable and can contain title, excerpt, content, thumbnail image with or without link to the post as single.
 
@@ -74,10 +74,15 @@ Currently the result of widget is ever displayed. Here it is possible to use fun
 If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible
 to create and use a conditional function created by you (in functions.php).
 
-= In widget, what is the code to see latest posts in current language ?
+= In widget, what is the code to see latest posts in current language  ? =
+
+[xili-language plugin active](https://wordpress.org/plugins/xili-language/)
+
 Very simple : `[lang='cur']`
 
-= In widget, what is the code to select two queries according current language ?
+= In widget, what is the code to select two queries according current language  ? =
+[xili-language plugin active](https://wordpress.org/plugins/xili-language/)
+
 In this case, condition uses a function available with xili_language :
 
 `[condition='is_xili_curlang' param='fr_fr' query='p=4953']:[query='p=4972']`
@@ -94,7 +99,7 @@ The webmaster is able to define a period (a slot) when the widget is visible in 
 
 = Is xili-post-in-post compatible with xili-language trilogy ? =
 
-Yes, visit [here](http://dev.xiligroup.com/) and look on the right sidebar or go in WordPress [repository](http://wordpress.org/extend/plugins/search.php?q=xili&sort=).
+Yes [xili-language plugin](https://wordpress.org/plugins/xili-language/) is compatible, visit [here](http://2014.extend.xiligroup.org/) and look on the right sidebar or go in WordPress [repository](https://wordpress.org/extend/plugins/search.php?q=xili-language&sort=).
 
 = Support Forum or contact form ? =
 
