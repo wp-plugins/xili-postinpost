@@ -3,8 +3,8 @@ Contributors: michelwppi, MS dev.xiligroup.com
 Donate link: http://dev.xiligroup.com/
 Tags: theme, post, plugin, posts, page, multilingual, widget, shortcode, template tag, conditional tag, template file
 Requires at least: 3.6.1
-Tested up to: 4.2
-Stable tag: 1.5.3
+Tested up to: 4.2.2
+Stable tag: 1.6.0
 License: GPLv2
 
 xili-postinpost provides a triple toolkit to insert post(s) everywhere in webpage. Template tag function, shortcode and widget are available.
@@ -29,11 +29,9 @@ For each post of the resulting list, the displayed result is hightly customizabl
 
 Paging is preserved even if a shortcode is used in a list of posts.
 
-= New with 1.5.3 : =
-* Last Updated 2014-12-22
+= New with 1.6.0 : =
+* Last Updated 2015-05-08
 * see [tab and chapters in changelog](http://wordpress.org/extend/plugins/xili-postinpost/changelog/)
-
-
 
 == Installation ==
 
@@ -76,8 +74,16 @@ Currently the result of widget is ever displayed. Here it is possible to use fun
 If the condition is false, you can decide to show result of another query. If the condition is not inside the conditional template tags, it is possible
 to create and use a conditional function created by you (in functions.php).
 
-= In widget, what the code to see latest posts in current language ?
+= In widget, what is the code to see latest posts in current language ?
 Very simple : `[lang='cur']`
+
+= In widget, what is the code to select two queries according current language ?
+In this case, condition uses a function available with xili_language :
+
+`[condition='is_xili_curlang' param='fr_fr' query='p=4953']:[query='p=4972']`
+
+param `fr_fr` is passed to function `is_xili_curlang`, so the first query is fired only if french webpage.
+The result adapts and displays the content (can be image+text) according webpage language.
 
 = When using shortcode, the result display excerpt under the title, why ? =
 
@@ -106,6 +112,8 @@ Run [live here](http://dev.xiligroup.com/)
 6. appearance - customize - widget settings UI: real time results during settings (WP 3.9+)
 
 == Changelog ==
+= 1.6.0 =
+* 2015-05-08 widget now display chosen size of image, param featuredimagesize (as in function or shorcode), new FAQ
 = 1.5.3 =
 * 2015-04-21 readme updated for WP 4.2
 * 2014-12-22 improves query if permalinks, inside front_page and xili_language active
@@ -156,7 +164,7 @@ Run [live here](http://dev.xiligroup.com/)
 = 0.8.0 =
 * 2010-11-12 - first public release w/o settings admin
 
-© 2015-04-21 - MS - dev.xiligroup.com
+© 2015-05-08 - MS - dev.xiligroup.com
 == More infos ==
 
 * Tested on WP mono and multisite mode.
